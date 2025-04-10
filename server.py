@@ -31,7 +31,7 @@ def start_server(host='localhost', port=12345):
     server.listen(5)
     print(f"[*] Server listening on {host}:{port}")
 
-    while len(clients) < 3:
+    while len(clients) < 4:
         conn, addr = server.accept()
         client_id = conn.recv(1024).decode().strip()
         clients[client_id] = conn
